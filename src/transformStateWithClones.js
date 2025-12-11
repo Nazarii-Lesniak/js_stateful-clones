@@ -30,7 +30,7 @@ function transformStateWithClones(state, actions) {
         break;
 
       default:
-        break;
+        throw new Error(`Unsupported action type: ${ACTION.type}`);
     }
 
     HISTORY.push(nextState);
